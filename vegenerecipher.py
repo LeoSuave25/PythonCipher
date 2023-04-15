@@ -35,6 +35,13 @@ for letter in repeated_key:
     initial_letter = ord(letter) - 65
     initial_key += str(initial_letter) + " "
 # Display it in a Row
+print(initial_text)
+print(initial_key)
 # Add two columns
+ciphered_text = ""
+for i in range(len(initial_text.split())):
+    ciphered_num = (int(initial_text.split()[i]) + int(initial_key.split()[i])) % 26
+    ciphered_letter = chr(ciphered_num + 65)
+    ciphered_text += ciphered_letter
 # Print the Ciphered Text
 # Put the program in loop
