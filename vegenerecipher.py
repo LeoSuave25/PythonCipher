@@ -1,4 +1,9 @@
 # Style the entire Project
+import pyfiglet as fig
+print("\033[32m","="*100,"\033[m")
+title = "Vigenere Cipher"
+print("\033[32m",fig.figlet_format(title),"\033[m")
+print(fig.figlet_format("Made by: Leoj M Suaverdez",font="bubble"))
 # Repeat the key until it became the same length as the raw_text
 def repeat_word(key, raw_text):
     target_length = len(raw_text)
@@ -44,4 +49,7 @@ for i in range(len(initial_text.split())):
     ciphered_letter = chr(ciphered_num + 65)
     ciphered_text += ciphered_letter
 # Print the Ciphered Text
+print("\033[41mCiphered Text: \033[m")
+print("\033[32m",ciphered_text,"\033[m")
+print("\033[32m","="*100,"\033[m")
 # Put the program in loop
